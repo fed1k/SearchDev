@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px #374151FF inset;
+  -webkit-text-fill-color: white;
+}
+
+.fade {
+  position: relative;
+  animation: fade 0.4s cubic-bezier(.25,.75,.5,1.25) 1;
+}
+
+.scaleUp {
+    animation: scaleUp 0.4s cubic-bezier(.25,.75,.5,1.25) 1;
+}
+
+@keyframes fade {
+  from { 
+    left: -70%;
+    opacity: 0;
+  }
+  to { 
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+.flw {
+  @apply text-white py-1 px-3 rounded-full block sm:inline-block bg-slate-600;
+}
